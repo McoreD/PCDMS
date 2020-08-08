@@ -6,16 +6,18 @@ namespace PCDMS
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewFileDialog : Window
     {
-        SettingsViewModel _settings = new SettingsViewModel();
 
-        public MainWindow()
+        string _sender;
+
+        public NewFileDialog(string sender)
         {
             InitializeComponent();
-            DataContext = _settings;
+            DataContext = App.Settings;
+            _sender = sender;
 
-            Title = $"PCDMS Mockup {Assembly.GetExecutingAssembly().GetName().Version.ToString()}";
+            Title = $"PCDMS Mockup {Assembly.GetExecutingAssembly().GetName().Version} - new {sender}";
             cboLevel1.SelectedIndex = 0;
             cboLevel2.SelectedIndex = 0;
             cboLevel3.SelectedIndex = 0;
@@ -25,14 +27,14 @@ namespace PCDMS
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            DocumentsManager doc = new DocumentsManager(_settings.DocumentsList);
+            DocumentsManager doc = new DocumentsManager();
             NamingData data1 = cboLevel1.SelectedItem as NamingData;
             NamingData data2 = cboLevel2.SelectedItem as NamingData;
             NamingData data3 = cboLevel3.SelectedItem as NamingData;
             NamingData data4 = cboLevel4.SelectedItem as NamingData;
             NamingData data5 = cboLevel5.SelectedItem as NamingData;
 
-            txtFileName.Text = doc.Add(data1.Code, data2.Code, data3.Code, data4.Code, data5.Code);
+            txtFileName.Text = doc.Add(data1.Code, data2.Code, data3.Code, data4.Code, data5.Code, _sender);
         }
 
         private void btnCopy_Click(object sender, RoutedEventArgs e)

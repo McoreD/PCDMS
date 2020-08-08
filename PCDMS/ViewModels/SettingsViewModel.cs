@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace PCDMS
 {
@@ -10,7 +11,7 @@ namespace PCDMS
         public List<NamingData> Level4 { get; set; }
         public List<NamingData> Level5 { get; set; }
 
-        public List<string> DocumentsList { get; set; } = new List<string>();
+        public ObservableCollection<DocInfo> DocumentsList { get; set; } = new ObservableCollection<DocInfo>();
 
         public SettingsViewModel()
         {
