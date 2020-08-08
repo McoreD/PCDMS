@@ -78,6 +78,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\DocType.cs" />
     <Compile Include="ViewModels\DocInfo.cs" />
     <Compile Include="Helpers\DocumentsManager.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">

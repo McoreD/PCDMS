@@ -17,9 +17,9 @@
     <StackPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
-                <MenuItem Header="New _Word document" Tag="Word document" Click="MenuItem_Click" />
-                <MenuItem Header="New _Excel workbook" Tag="Excel workbook" Click="MenuItem_Click"/>
-                <MenuItem Header="New _PowerPoint presentation" Tag="PowerPoint presentation" Click="MenuItem_Click"/>
+                <MenuItem x:Name="miWord" Header="New _Word document" Click="MenuItem_Click" />
+                <MenuItem x:Name="miExcel" Header="New _Excel workbook" Click="MenuItem_Click"/>
+                <MenuItem x:Name="miPowerPoint" Header="New _PowerPoint presentation" Click="MenuItem_Click"/>
                 <Separator />
                 <MenuItem Header="E_xit" />
             </MenuItem>
