@@ -10,11 +10,11 @@ namespace PCDMS
         private string _filePath = "fnc.csv";
         private List<NamingData> _codes;
 
-        public List<NamingData> Level1;
-        public List<NamingData> Level2;
-        public List<NamingData> Level3;
-        public List<NamingData> Level4;
-        public List<NamingData> Level5;
+        public List<NamingData> Level1 { get; private set; } = new List<NamingData>();
+        public List<NamingData> Level2 { get; private set; } = new List<NamingData>();
+        public List<NamingData> Level3 { get; private set; } = new List<NamingData>();
+        public List<NamingData> Level4 { get; private set; } = new List<NamingData>();
+        public List<NamingData> Level5 { get; private set; } = new List<NamingData>();
 
         public NamingHelper()
         {
@@ -23,29 +23,12 @@ namespace PCDMS
 
             if (_codes.Count > 0)
             {
-                foreach (NamingData data in _codes)
-                {
-                    switch (data.Level)
-                    {
-                        case 1:
-                            Level1.Add(data);
-                            break;
-                        case 2:
-                            Level2.Add(data);
-                            break;
-                        case 3:
-                            Level3.Add(data);
-                            break;
-                        case 4:
-                            Level4.Add(data);
-                            break;
-                        case 5:
-                            Level5.Add(data);
-                            break;
-                    }
-                }
+                Level1.AddRange(_codes.Where(x => x.Level == 1).ToList());
+                Level2.AddRange(_codes.Where(x => x.Level == 2).ToList());
+                Level3.AddRange(_codes.Where(x => x.Level == 3).ToList());
+                Level4.AddRange(_codes.Where(x => x.Level == 4).ToList());
+                Level5.AddRange(_codes.Where(x => x.Level == 5).ToList());
             }
-
         }
     }
 

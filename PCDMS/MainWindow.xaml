@@ -15,7 +15,13 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel Orientation="Vertical">
-        <ComboBox></ComboBox>
-        <Button></Button>
+        <ComboBox x:Name="cboLevel1" Margin="10" SelectionChanged="cboLevel_SelectionChanged" ItemsSource="{Binding Level1}" ></ComboBox>
+        <ComboBox x:Name="cboLevel2" Margin="10" SelectionChanged="cboLevel_SelectionChanged" ItemsSource="{Binding Level2}" ></ComboBox>
+        <ComboBox x:Name="cboLevel3" Margin="10" SelectionChanged="cboLevel_SelectionChanged" ItemsSource="{Binding Level3}" ></ComboBox>
+        <ComboBox x:Name="cboLevel4" Margin="10" SelectionChanged="cboLevel_SelectionChanged" ItemsSource="{Binding Level4}" ></ComboBox>
+        <ComboBox x:Name="cboLevel5" Margin="10" SelectionChanged="cboLevel_SelectionChanged" ItemsSource="{Binding Level5}" ></ComboBox>
+        <Button x:Name="btnCreate" Margin="10" Click="btnCreate_Click" >Create file name</Button>
+        <TextBox x:Name="txtFileName" Margin="10" IsReadOnly="True"></TextBox>
+        <Button x:Name="btnCopy" Margin="10" Click="btnCopy_Click" >Copy to clipboard</Button>
     </StackPanel>
 </Window>
