@@ -19,7 +19,6 @@ namespace PCDMS
             MenuItem mi = sender as MenuItem;
             NewFileDialog dialog = new NewFileDialog(mi.Tag.ToString());
             dialog.ShowDialog();
-
         }
     }
 }

@@ -34,17 +34,13 @@ namespace PCDMS
             NamingData data4 = cboLevel4.SelectedItem as NamingData;
             NamingData data5 = cboLevel5.SelectedItem as NamingData;
 
-            txtFileName.Text = doc.Add(data1.Code, data2.Code, data3.Code, data4.Code, data5.Code, _sender);
-        }
-
-        private void btnCopy_Click(object sender, RoutedEventArgs e)
-        {
-            Clipboard.SetText(txtFileName.Text);
+            doc.Add(data1.Code, data2.Code, data3.Code, data4.Code, data5.Code, txtFileTitle.Text, _sender);
+            Close();
         }
 
         private void cboLevel_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            txtFileName.Clear();
+            txtFileTitle.Clear();
         }
     }
 }
