@@ -9,15 +9,15 @@ namespace PCDMS
     public partial class NewFileDialog : Window
     {
 
-        DocType _docType;
+        DocInfo _docInfo;
 
-        public NewFileDialog(DocType docType)
+        public NewFileDialog(DocInfo docInfo)
         {
             InitializeComponent();
             DataContext = App.Settings;
-            _docType = docType;
+            _docInfo = docInfo;
 
-            Title = $"PCDMS Mockup {Assembly.GetExecutingAssembly().GetName().Version} - New {docType.Description}";
+            Title = $"PCDMS Mockup {Assembly.GetExecutingAssembly().GetName().Version} - New {docInfo.Type}";
             cboLevel1.SelectedIndex = 0;
             cboLevel2.SelectedIndex = 0;
             cboLevel3.SelectedIndex = 0;
@@ -34,7 +34,8 @@ namespace PCDMS
             NamingData data4 = cboLevel4.SelectedItem as NamingData;
             NamingData data5 = cboLevel5.SelectedItem as NamingData;
 
-            doc.Add(data1.Code, data2.Code, data3.Code, data4.Code, data5.Code, txtFileTitle.Text, _docType);
+            _docInfo.Name = txtFileTitle.Text;
+            doc.Add(data1.Code, data2.Code, data3.Code, data4.Code, data5.Code, _docInfo);
             Close();
         }
 

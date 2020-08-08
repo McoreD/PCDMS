@@ -14,15 +14,15 @@ namespace PCDMS
             dgDocuments.ItemsSource = App.Settings.DocumentsList;
             Title = "PCDMS Mockup";
 
-            miWord.Tag = new DocType() { Description = "Word Document", Extension = "docx" };
-            miExcel.Tag = new DocType() { Description = "Excel Workbook", Extension = "xlsx" };
-            miPowerPoint.Tag = new DocType() { Description = "PowerPoint Presentation", Extension = "pptx" };
+            miWord.Tag = new DocInfo() { Type = "Word Document", Extension = "docx" };
+            miExcel.Tag = new DocInfo() { Type = "Excel Workbook", Extension = "xlsx" };
+            miPowerPoint.Tag = new DocInfo() { Type = "PowerPoint Presentation", Extension = "pptx" };
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             MenuItem mi = sender as MenuItem;
-            NewFileDialog dialog = new NewFileDialog(mi.Tag as DocType);
+            NewFileDialog dialog = new NewFileDialog(mi.Tag as DocInfo);
             dialog.ShowDialog();
         }
     }
