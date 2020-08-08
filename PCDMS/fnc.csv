@@ -1,0 +1,127 @@
+Level,Code,Description
+1,SWA,SmartWays Alliance
+2,0,Kwinana Northbound
+2,1,Manning Canning CRS
+2,2,Future Works 2
+2,3,Future Works 3
+3,AR,Asset Responsibility
+3,CI,Civil
+3,EI,Electrical and ITS
+3,EL,Electrical
+3,IT,ITS
+3,ST,Structural
+3,CS,Communication and Stakeholders
+3,EN,Environment and Sustainability
+3,HS,Health and Safety
+3,OR,Operational and Readiness
+3,PM,Project Management
+3,PR,Procurement
+3,QA,Quality Assurance
+3,RS,Rail Safety
+3,SU,Survey
+3,TM,Traffic Management
+3,TW,Temporary Work
+3,WR ,Works Report
+4,AB,Abutments
+4,AD,Administration
+4,AL,Alignment & Geometry
+4,AU,Auditing
+4,AR,Asset Responsibility
+4,AW,Accommodation Works
+4,BM,BIM
+4,BR,Bridge
+4,CM,Communications
+4,CO,Coordination
+4,CI,Civil
+4,DE,Design Management
+4,DR,Drainage
+4,DU,Durability
+4,ED,Environmental Design
+4,EF,Existing Features
+4,EI,Electrical and ITS
+4,EL,Electrical
+4,EW,Earthworks
+4,FN,Fencing 
+4,GA,Gantry/Sign Structures 
+4,GE,General
+4,GD,Geotechnical Design
+4,GI,Geotechnical Investigations
+4,GS,Gas
+4,GV,Governance
+4,HR,Human Resource Management
+4,HS,Health and Safety
+4,ID,Intersection Details
+4,IM,Interface Management
+4,IN,Incident Reporting
+4,IP,Innovation Paper
+4,IO,Inspections and Observations
+4,IR,Irrigation
+4,IT,ITS
+4,LA,Landscaping
+4,LI,Lighting
+4,MP,Management Plan
+4,NB,Noise Barriers
+4,PP,Position Paper
+4,PA,Pavements
+4,PI,Piling
+4,PM,Programming
+4,PO,Power
+4,QM,Quality Management
+4,RA,Ramps 
+4,RI,Risk Management
+4,RF,Road Furniture 
+4,RW,Retaining Walls 
+4,SC,Site Clearance
+4,SD,Stormwater Details
+4,SM,Scope Management
+4,SI,Signals
+4,SL,Signs & Lines
+4,SU,Survey
+4,ST,Structures
+4,TA,Traffic Modelling & Analysis
+4,TD,Typical Drawings
+4,TM,Traffic Management
+4,TS,Typical Sections
+4,UT,Utilities
+4,VM,Verge and Median
+4,WA,Wall
+4,WI,Work Instruction
+4,WQ,Water Quality
+4,WT,Water
+4,XS,Cross sections
+5,CAL,Calculation
+5,CHK,Checklist
+5,COM,Comment Sheet
+5,CON,Contract/Agreement
+5,DRG,Drawing
+5,LET,Letter
+5,MEM,Memo
+5,MOM,Minutes of Meeting
+5,PAA,Process Application Audit
+5,PPA,Process and Product Audits
+5,PCP,Process Contol Plan
+5,PLN,Plan
+5,PQI,Product Quality Inspection
+5,PRC,Process
+5,PUA,Project Understanding Audit
+5,REG,Register
+5,REP,Report
+5,REV,Review
+5,RFI,Request for information
+5,SCH,Schedule
+5,SKE,Sketch
+5,SPE,Specification
+5,TAN,Technical Advice Note
+5,TOR,Terms of Reference
+5,TQY,Technical Query
+5,TMP,Template
+5,TRN,Transmittal
+5,VAR,Variation
+5,12D,12d model
+5,2DX,2D xref
+5,3DX,3D xref
+5,GIS,GIS data
+5,IMG,Image file
+5,MXM,MX Model
+5,VIZ,Visualisation model
+,,
