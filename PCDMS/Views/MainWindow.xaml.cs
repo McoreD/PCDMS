@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Reflection;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace PCDMS
@@ -12,7 +13,7 @@ namespace PCDMS
         {
             InitializeComponent();
             dgDocuments.ItemsSource = App.Settings.DocumentsList;
-            Title = "PCDMS Mockup";
+            Title = "PCDMS Mockup " + Assembly.GetExecutingAssembly().GetName().Version;
 
             miWord.Tag = new DocInfo() { Type = "Word Document", Extension = "docx" };
             miExcel.Tag = new DocInfo() { Type = "Excel Workbook", Extension = "xlsx" };
@@ -24,6 +25,11 @@ namespace PCDMS
             MenuItem mi = sender as MenuItem;
             NewFileDialog dialog = new NewFileDialog(mi.Tag as DocInfo);
             dialog.ShowDialog();
+        }
+
+        private void miExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

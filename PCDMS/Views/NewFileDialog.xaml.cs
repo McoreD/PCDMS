@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using System.Windows;
+﻿using System.Windows;
 
 namespace PCDMS
 {
@@ -17,7 +16,7 @@ namespace PCDMS
             DataContext = App.Settings;
             _docInfo = docInfo;
 
-            Title = $"PCDMS Mockup {Assembly.GetExecutingAssembly().GetName().Version} - New {docInfo.Type}";
+            Title = $"PCDMS Mockup - New {docInfo.Type}";
             cboLevel1.SelectedIndex = 0;
             cboLevel2.SelectedIndex = 0;
             cboLevel3.SelectedIndex = 0;

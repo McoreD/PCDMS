@@ -7,10 +7,10 @@
 #define MyAppURL "https://www.mainroads.wa.gov.au/"
 #define MyAppExeName "PCDMS.exe"
 #define MyAppOutputDirectory "\Output"
-#define MyAppReleaseDirectory "PCDMS\bin\Debug"
-#define MyAppFilepath MyAppReleaseDirectory + "\" + MyAppExeName
+#define MyAppReleaseDirectory "PCDMS\bin\Release"
+#define MyAppPath MyAppReleaseDirectory + "\" + MyAppExeName
 #dim Version[4]
-#expr ParseVersion(MyAppFilepath, Version[0], Version[1], Version[2], Version[3])
+#expr ParseVersion(MyAppPath, Version[0], Version[1], Version[2], Version[3])
 #define MyAppVersion Str(Version[0]) + "." + Str(Version[1]) + "." + Str(Version[2])
 
 [Setup]
@@ -41,7 +41,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "{#MyAppFilepath}"; DestDir: {app}; Flags: ignoreversion
+Source: "{#MyAppPath}"; DestDir: {app}; Flags: ignoreversion
 Source: "{#MyAppReleaseDirectory}\*.csv"; DestDir: {app}; Flags: ignoreversion
 Source: "{#MyAppReleaseDirectory}\*.dll"; DestDir: {app}; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
