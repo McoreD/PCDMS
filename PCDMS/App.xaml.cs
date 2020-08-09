@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.IO;
+using System.Windows;
 
 namespace PCDMS
 {
@@ -7,6 +9,21 @@ namespace PCDMS
     /// </summary>
     public partial class App : Application
     {
-        public static SettingsViewModel Settings = new SettingsViewModel();
+        public static SettingsViewModel Settings;
+
+        public static readonly string PersonalFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PCDMS");
+        public static string SettingsFilePath
+        {
+            get
+            {
+                return Path.Combine(PersonalFolder, "Settings.json");
+            }
+        }
+
+        public App()
+        {
+            Settings = SettingsViewModel.Load(SettingsFilePath);
+            Settings.LoadCodes();
+        }
     }
 }

@@ -1,19 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using ShareX.HelpersLib;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace PCDMS
 {
-    public class SettingsViewModel
+    public class SettingsViewModel : SettingsBase<SettingsViewModel>
     {
+        [JsonIgnore]
         public List<NamingData> Level1 { get; set; }
+        [JsonIgnore]
         public List<NamingData> Level2 { get; set; }
+        [JsonIgnore]
         public List<NamingData> Level3 { get; set; }
+        [JsonIgnore]
         public List<NamingData> Level4 { get; set; }
+        [JsonIgnore]
         public List<NamingData> Level5 { get; set; }
 
         public ObservableCollection<DocInfo> DocumentsList { get; set; } = new ObservableCollection<DocInfo>();
-
-        public SettingsViewModel()
+        public void LoadCodes()
         {
             NamingHelper helper = new NamingHelper();
             Level1 = helper.Level1;
