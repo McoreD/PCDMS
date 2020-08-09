@@ -16,10 +16,22 @@
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <StackPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File">
-                <MenuItem x:Name="miWord" Header="New _Word document" Click="MenuItem_Click" />
-                <MenuItem x:Name="miExcel" Header="New _Excel workbook" Click="MenuItem_Click"/>
-                <MenuItem x:Name="miPowerPoint" Header="New _PowerPoint presentation" Click="MenuItem_Click"/>
+            <MenuItem Header="_New">
+                <MenuItem x:Name="miWord" Header="_Word document" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="../img/icons8-microsoft-word-2019-48.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="miExcel" Header="_Excel workbook" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="../img/icons8-microsoft-excel-2019-48.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="miPowerPoint" Header="_PowerPoint presentation" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="../img/icons8-microsoft-powerpoint-48.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
                 <Separator />
                 <MenuItem Name="miExit" Header="E_xit" Click="miExit_Click" />
             </MenuItem>
